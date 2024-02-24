@@ -2,10 +2,10 @@ import styled from "styled-components";
 import { Container } from "@/styles/util-styles";
 
 export const StyledHeader = styled.header`
-  display: fixed;
+  position: fixed;
   color: ${({ theme }) => theme.colors.text.secondary.lightest};
   top: 0;
-  z-index: 40;
+  z-index: 30;
   width: 100%;
 `;
 
