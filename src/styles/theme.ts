@@ -1,4 +1,4 @@
-export const colorTokens = {
+const colorTokens = {
   blue: {
     900: "#28293E",
   },
@@ -20,6 +20,13 @@ export const colorTokens = {
 };
 
 const theme = {
+  breakpoints: {
+    sm: "640px",
+    md: "768px",
+    lg: "1024px",
+    xl: "1280px",
+    "2xl": "1536px",
+  },
   colors: {
     background: {
       primary: colorTokens.blue[900],
@@ -44,7 +51,28 @@ const theme = {
       },
     },
   },
-  typography: {},
+  typography: {
+    fontFamily: {
+      primary: ["Epilogue", "sans-serif"].join(","),
+    },
+    fontWeight: {
+      regular: 400,
+      medium: 500,
+      semiBold: 600,
+      bold: 700,
+      extraBold: 800,
+      black: 900,
+    },
+    fontSize: {
+      small: "0.875rem", //14px
+      regular: "1rem", //16px
+      medium: "1.25rem", //20px
+      large1: "1.5rem", //24px
+      large2: "2.5rem", //40px
+      large3: "3.5rem", //56px
+      largest: "4.5rem", //72px
+    },
+  },
 };
 
 export default theme;

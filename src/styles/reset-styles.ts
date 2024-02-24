@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 const CSSReset = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@100..900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400..900&display=swap');
 
   *,
   *::before,
@@ -26,8 +26,8 @@ const CSSReset = createGlobalStyle`
   }
 
   body {
-    font-family: "Epilogue", sans-serif;
-    font-size: 1rem;
+    font-family: ${({ theme }) => theme.typography.fontFamily.primary};
+    font-size: ${({ theme }) => theme.typography.fontSize.regular};
     min-height: 100vh;
   }
 
