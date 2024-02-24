@@ -14,6 +14,7 @@ export const NavbarContainer = styled(Container)`
   justify-content: space-between;
   align-items: center;
   padding-block: 1rem;
+  max-width: none;
 `;
 
 export const StyledLogoContainer = styled.div`
@@ -49,7 +50,6 @@ export const MobileNavbar = styled.nav`
   top: 3rem;
   right: 0;
   color: black;
-  border: 1px solid red;
   padding-inline: 5rem;
   padding-block: 3rem;
   background-color: white;
@@ -61,7 +61,7 @@ export const MobileNavbar = styled.nav`
 
     a {
       font-size: ${({ theme }) => theme.typography.fontSize.regular};
-      color: black;
+      color: ${({ theme }) => theme.colors.text.blue[900]};
 
       &.active {
         color: ${({ theme }) => theme.colors.accent.medium};

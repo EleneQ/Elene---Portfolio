@@ -25,6 +25,9 @@ declare module "styled-components" {
           light: string;
           medium: string;
         };
+        blue: {
+          900: string;
+        };
       };
       accent: {
         light: string;

@@ -45,6 +45,9 @@ const theme: DefaultTheme = {
         light: colorTokens.gray[400],
         medium: colorTokens.gray[500],
       },
+      blue: {
+        900: colorTokens.blue[900],
+      },
     },
     accent: {
       light: colorTokens.red[400],
