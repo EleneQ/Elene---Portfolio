@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-const GlobalStyles = createGlobalStyle`
+const CSSReset = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@100..900&display=swap');
 
   *,
@@ -65,4 +65,4 @@ const GlobalStyles = createGlobalStyle`
   }
 `;
 
-export default GlobalStyles;
+export default CSSReset;
