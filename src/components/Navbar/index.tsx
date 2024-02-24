@@ -1,15 +1,9 @@
 import logo from "@/images/logo.svg";
 import Link from "./Link";
-import { SelectedPage } from "@/types";
 import { StyledHeader, StyledNavList, StyledLogoContainer } from "./styles";
 import { Container } from "@/styles/util-styles";
 
-interface Props {
-  selectedPage: SelectedPage;
-  setSelectedPage: (value: SelectedPage) => void;
-}
-
-const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
+const Navbar = () => {
   return (
     <Container>
       <StyledHeader>
@@ -22,32 +16,16 @@ const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
           <nav>
             <StyledNavList>
               <li>
-                <Link
-                  page="Home"
-                  selectedPage={selectedPage}
-                  setSelectedPage={setSelectedPage}
-                />
+                <Link page="Home" />
               </li>
               <li>
-                <Link
-                  page="About"
-                  selectedPage={selectedPage}
-                  setSelectedPage={setSelectedPage}
-                />
+                <Link page="About" />
               </li>
               <li>
-                <Link
-                  page="Projects"
-                  selectedPage={selectedPage}
-                  setSelectedPage={setSelectedPage}
-                />
+                <Link page="Projects" />
               </li>
               <li>
-                <Link
-                  page="Contact"
-                  selectedPage={selectedPage}
-                  setSelectedPage={setSelectedPage}
-                />
+                <Link page="Contact" />
               </li>
             </StyledNavList>
           </nav>
