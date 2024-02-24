@@ -1,3 +1,5 @@
+import { DefaultTheme } from "styled-components";
+
 const colorTokens = {
   blue: {
     900: "#28293E",
@@ -19,13 +21,13 @@ const colorTokens = {
   },
 };
 
-const theme = {
+const theme: DefaultTheme = {
   breakpoints: {
+    xs: "500px",
     sm: "640px",
     md: "768px",
     lg: "1024px",
     xl: "1280px",
-    "2xl": "1536px",
   },
   colors: {
     background: {
@@ -44,11 +46,9 @@ const theme = {
         medium: colorTokens.gray[500],
       },
     },
-    surface: {
-      accent: {
-        light: colorTokens.red[400],
-        medium: colorTokens.red[500],
-      },
+    accent: {
+      light: colorTokens.red[400],
+      medium: colorTokens.red[500],
     },
   },
   typography: {

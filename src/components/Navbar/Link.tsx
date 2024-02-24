@@ -10,19 +10,17 @@ const Link = ({ page }: Props) => {
   const { selectedPage, setSelectedPage } = useAnchorLink();
 
   const lowerCasePage = page.toLowerCase().replace(/ /g, "") as SelectedPage;
+  const isSelected = selectedPage === lowerCasePage;
 
   return (
     <AnchorLink
-      style={{
-        transition: "all",
-        animationDuration: "3s",
-        color: selectedPage === lowerCasePage ? "red" : "black",
-      }}
       href={`#${lowerCasePage}`}
       onClick={() => setSelectedPage(lowerCasePage)}
+      className={`${isSelected ? "active" : ""}`}
     >
       {page}
     </AnchorLink>
   );
 };
+
 export default Link;

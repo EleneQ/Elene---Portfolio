@@ -1,8 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
 const CSSReset = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400..900&display=swap');
-
   *,
   *::before,
   *::after {
