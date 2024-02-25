@@ -1,6 +1,6 @@
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { SelectedPage } from "@/types";
-import { useAnchorLink } from "@/context/anchorLink";
+import { useAnchorLink } from "@/hooks/useAnchorLink";
 
 interface Props {
   page: string;

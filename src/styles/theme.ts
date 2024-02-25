@@ -10,6 +10,7 @@ const colorTokens = {
   red: {
     400: "#EF6C57",
     500: "#EF6D58",
+    600: "#FF3131",
   },
   brown: {
     800: "rgba(57, 20, 0, 0.64)",
@@ -54,6 +55,7 @@ const theme: DefaultTheme = {
       light: colorTokens.red[400],
       medium: colorTokens.red[500],
     },
+    error: colorTokens.red["600"],
   },
   typography: {
     fontFamily: {

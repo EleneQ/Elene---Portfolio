@@ -74,6 +74,10 @@ export const MySkillsStyled = styled.div`
     gap: 0.5rem;
     align-items: center;
 
+    li {
+      cursor: pointer;
+    }
+
     @media (max-width: ${({ theme }) => theme.breakpoints.xs}) {
       justify-content: center;
     }

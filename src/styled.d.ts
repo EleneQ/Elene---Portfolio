@@ -33,6 +33,7 @@ declare module "styled-components" {
         light: string;
         medium: string;
       };
+      error: string;
     };
 
     typography: {

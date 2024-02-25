@@ -50,15 +50,15 @@ const CSSReset = createGlobalStyle`
   textarea,
   select {
     font: inherit;
+    border: none;
   }
 
-  button {
-    border: none;
-
+  button, input {
     &:not(:disabled) {
     cursor: pointer;
   }
   }
+  
 
   @media (prefers-reduced-motion: reduce) {
     *,
