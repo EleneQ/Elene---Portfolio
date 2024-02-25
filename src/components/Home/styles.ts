@@ -29,22 +29,10 @@ export const HeroTextSection = styled.div`
   text-align: center;
   max-width: 500px;
 
-  p {
-    color: ${({ theme }) => theme.colors.text.tertiary.light};
-    line-height: 2rem;
-    max-width: 430px;
-    margin-inline: auto;
-  }
-
   @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
     text-align: left;
     order: unset;
     max-width: none;
-
-    p {
-      max-width: 470px;
-      margin-inline: unset;
-    }
   }
 `;
 
@@ -77,11 +65,23 @@ export const HeroSectionHeader = styled.h1`
     }
 
     @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
-      font-size: ${({ theme }) => theme.typography.fontSize.large3};
+      font-size: ${({ theme }) => theme.typography.fontSize.large2};
     }
 
     @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
       font-size: ${({ theme }) => theme.typography.fontSize.largest};
     }
+  }
+`;
+
+export const Description = styled.p`
+  color: ${({ theme }) => theme.colors.text.tertiary.light};
+  line-height: 2rem;
+  max-width: 430px;
+  margin-inline: auto;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+    max-width: 470px;
+    margin-inline: unset;
   }
 `;

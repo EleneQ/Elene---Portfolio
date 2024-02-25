@@ -16,6 +16,7 @@ declare module "styled-components" {
       };
       text: {
         primary: {
+          medium: string;
           dark: string;
         };
         secondary: {
@@ -23,7 +24,6 @@ declare module "styled-components" {
         };
         tertiary: {
           light: string;
-          medium: string;
         };
         blue: {
           900: string;

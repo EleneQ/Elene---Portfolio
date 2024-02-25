@@ -32,6 +32,7 @@ const CSSReset = createGlobalStyle`
   img,
   picture {
     max-width: 100%;
+    max-height: 100%;
     display: block; 
   }
 
@@ -49,6 +50,14 @@ const CSSReset = createGlobalStyle`
   textarea,
   select {
     font: inherit;
+  }
+
+  button {
+    border: none;
+
+    &:not(:disabled) {
+    cursor: pointer;
+  }
   }
 
   @media (prefers-reduced-motion: reduce) {

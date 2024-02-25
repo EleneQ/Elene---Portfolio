@@ -12,6 +12,7 @@ const colorTokens = {
     500: "#EF6D58",
   },
   brown: {
+    800: "rgba(57, 20, 0, 0.64)",
     900: "#391400",
   },
   white: "#FFFFFF",
@@ -36,6 +37,7 @@ const theme: DefaultTheme = {
     },
     text: {
       primary: {
+        medium: colorTokens.brown[800],
         dark: colorTokens.brown[900],
       },
       secondary: {
@@ -43,7 +45,6 @@ const theme: DefaultTheme = {
       },
       tertiary: {
         light: colorTokens.gray[400],
-        medium: colorTokens.gray[500],
       },
       blue: {
         900: colorTokens.blue[900],

@@ -4,6 +4,7 @@ import {
   HeroContainer,
   HeroTextSection,
   HeroSectionHeader,
+  Description,
 } from "./styles";
 
 const Home = () => {
@@ -14,11 +15,12 @@ const Home = () => {
           <HeroSectionHeader>
             <div>We’re Help</div> To Build Your Dream Project
           </HeroSectionHeader>
-          <p>
+          <Description>
             Agency provides a full service range including technical skills,
             design, business understanding.
-          </p>
+          </Description>
         </HeroTextSection>
+
         <div>
           <img src={heroBackground} alt="illustration of hobbies" />
         </div>

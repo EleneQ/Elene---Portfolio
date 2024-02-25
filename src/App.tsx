@@ -3,15 +3,20 @@ import CSSReset from "./styles/reset-styles";
 import Navbar from "@/components/Navbar";
 import theme from "@/styles/theme";
 import Home from "@/components/Home";
+import About from "@/components/About";
+import { AnchorLinkProvider } from "./context/anchorLink";
 
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
-      <CSSReset />
-      <Navbar />
-      <main>
-        <Home />
-      </main>
+      <AnchorLinkProvider>
+        <CSSReset />
+        <Navbar />
+        <main>
+          <Home />
+          <About />
+        </main>
+      </AnchorLinkProvider>
     </ThemeProvider>
   );
 };

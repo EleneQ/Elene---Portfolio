@@ -19,7 +19,7 @@ export const useAnchorLink = () => {
   return useContext(AnchorLinkContext);
 };
 
-export const DogDataProvider = ({ children }: ProviderProps) => {
+export const AnchorLinkProvider = ({ children }: ProviderProps) => {
   const [selectedPage, setSelectedPage] = useState(SelectedPage.Home);
 
   return (
