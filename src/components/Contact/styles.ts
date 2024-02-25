@@ -14,9 +14,6 @@ export const ContactContainer = styled(Container)`
 `;
 
 export const ContactContent = styled.div`
-  display: flex;
-  flex-direction: column;
-
   @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -26,10 +23,6 @@ export const ContactContent = styled.div`
 
   @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
     gap: 5rem;
-  }
-
-  img {
-    max-height: 400px;
   }
 `;
 
@@ -46,6 +39,18 @@ export const FormStyled = styled.form`
   max-width: 400px;
   margin-inline: auto;
 
+  @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+    padding-block: 4.5rem;
+    max-width: 420px;
+    margin-inline: 0;
+    margin-left: auto;
+  }
+`;
+
+export const InputContainer = styled.div`
+  position: relative;
+  width: 100%;
+
   textarea {
     resize: none;
   }
@@ -58,18 +63,6 @@ export const FormStyled = styled.form`
     color: ${({ theme }) => theme.colors.text.blue[900]};
     font-size: ${({ theme }) => theme.typography.fontSize.small};
   }
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
-    padding-block: 4.5rem;
-    max-width: 420px;
-    margin-inline: 0;
-    margin-left: auto;
-  }
-`;
-
-export const InputContainer = styled.div`
-  position: relative;
-  width: 100%;
 `;
 
 export const ErrorText = styled.p`
@@ -92,5 +85,9 @@ export const ImageContainer = styled.div`
 
   @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
     display: block;
+
+    img {
+      max-height: 440px;
+    }
   }
 `;

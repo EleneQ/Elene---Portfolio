@@ -5,7 +5,7 @@ import theme from "@/styles/theme";
 import Home from "@/components/Home";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
-// import Projects from "@/components/Projects";
+import Projects from "@/components/Projects";
 import { AnchorLinkProvider } from "./context/anchorLink";
 
 const App = () => {
@@ -17,7 +17,7 @@ const App = () => {
         <main>
           <Home />
           <About />
-          {/* <Projects /> */}
+          <Projects />
           <Contact />
         </main>
       </AnchorLinkProvider>
