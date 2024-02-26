@@ -47,10 +47,6 @@ export const DesktopNavList = styled.ul<{ isTopOfPage: boolean }>`
       isTopOfPage
         ? theme.colors.text.secondary.lightest
         : theme.colors.text.blue[900]};
-    color: ${({ theme, isTopOfPage }) =>
-      isTopOfPage
-        ? theme.colors.text.secondary.lightest
-        : theme.colors.text.blue[900]};
     &.active {
       color: ${({ theme }) => theme.colors.accent.medium};
     }

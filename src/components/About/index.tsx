@@ -9,11 +9,9 @@ import {
 import MySkills from "./MySkills";
 
 const About = () => {
-
   return (
     <AboutStyled id="about">
-      <AboutContainer
-      >
+      <AboutContainer>
         <div>
           <Image src={about} alt="illustrations" />
         </div>

@@ -1,4 +1,4 @@
-import { FormEvent } from "react";
+import { FormEvent, useRef } from "react";
 import { useForm } from "react-hook-form";
 import {
   ContactContainer,
@@ -10,35 +10,56 @@ import {
 } from "./styles";
 import formImg from "@/images/formImg.png";
 import PrimaryBtn from "../Buttons/primaryBtn";
+import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const form = useRef<HTMLFormElement>(null);
+
   const {
     register,
     trigger,
     formState: { errors },
+    reset,
   } = useForm();
 
   const onSubmitHandler = async (e: FormEvent) => {
     const isValid = await trigger();
+    e.preventDefault();
 
-    if (!isValid) {
-      e.preventDefault();
+    if (isValid) {
+      emailjs
+        .sendForm(
+          import.meta.env.VITE_SERVICE_ID,
+          import.meta.env.VITE_TEMPLATE_ID,
+          form.current!,
+          {
+            publicKey: "0CNtCu8oFGlGFpdZ1",
+          }
+        )
+        .then(
+          () => {
+            reset();
+          },
+          (error) => {
+            console.log("FAILED...", error.text);
+          }
+        );
     }
   };
 
   return (
     <section id="contact">
-      <ContactContainer
-       
-      >
+      <ContactContainer>
         <h2>Send me a message!</h2>
 
         <ContactContent>
           <FormStyled
-            action="https://formsubmit.co/ca0b86c13d72fb2c60603b79480c24ac"
-            target="_blank"
+            ref={form}
             onSubmit={onSubmitHandler}
-            method="POST"
+            // action="https://formsubmit.co/ca0b86c13d72fb2c60603b79480c24ac"
+            // target="_blank"
+            // method="POST"
           >
             <InputContainer>
               <input
@@ -99,7 +120,14 @@ const Contact = () => {
           </FormStyled>
 
           <ImageContainer>
-            <img src={formImg} alt="a girl on a rocket" />
+            <motion.div
+              animate={{
+                y: [-10, 10, -10],
+                transition: { duration: 3, repeat: Infinity },
+              }}
+            >
+              <img src={formImg} alt="a girl on a rocket" />
+            </motion.div>
           </ImageContainer>
         </ContactContent>
       </ContactContainer>

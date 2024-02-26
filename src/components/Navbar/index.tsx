@@ -22,15 +22,14 @@ const Navbar = () => {
 
   const isBigScreen = useMediaQuery(`(min-width: ${theme.breakpoints.sm})`);
 
-  const handleScroll = () => {
-    if (window.scrollY <= 70) {
-      setIsTopOfPage(true);
-    } else {
-      setIsTopOfPage(false);
-    }
-  };
-
   useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY <= 100) {
+        setIsTopOfPage(true);
+      } else {
+        setIsTopOfPage(false);
+      }
+    };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
