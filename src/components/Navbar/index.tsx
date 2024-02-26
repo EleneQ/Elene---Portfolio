@@ -24,7 +24,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY <= 100) {
+      if (window.scrollY <= 90) {
         setIsTopOfPage(true);
       } else {
         setIsTopOfPage(false);
@@ -44,7 +44,7 @@ const Navbar = () => {
 
         {isBigScreen ? (
           <nav>
-            <DesktopNavList isTopOfPage={isTopOfPage}>
+            <DesktopNavList>
               {navLinks.map((navLink) => (
                 <li key={navLink}>
                   <Link page={`${navLink}`} />

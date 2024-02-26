@@ -7,21 +7,19 @@ export const StyledHeader = styled.header<{ isTopOfPage: boolean }>`
   top: 0;
   z-index: 30;
   width: 100%;
+  color: ${({ theme }) => theme.colors.text.secondary.lightest};
   background-color: ${({ theme, isTopOfPage }) =>
-    isTopOfPage ? "transparent" : theme.colors.background.secondary};
-  color: ${({ theme, isTopOfPage }) =>
-    isTopOfPage
-      ? theme.colors.text.secondary.lightest
-      : theme.colors.text.blue[900]};
+    isTopOfPage ? "transparent" : theme.colors.background.primary};
   box-shadow: ${({ isTopOfPage }) =>
-    isTopOfPage ? "" : "rgba(0, 0, 0, 0.35) 0px 5px 15px"};
+    isTopOfPage ? "" : "rgba(0, 0, 0, 0.45) 0px 5px 15px"};
+  transition: background-color 0.3s ease-in-out;
 `;
 
 export const NavbarContainer = styled(Container)`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-block: 0.7rem;
+  padding-block: 1rem;
   max-width: none;
 `;
 
@@ -36,17 +34,15 @@ export const StyledLogoContainer = styled.div`
   }
 `;
 
-export const DesktopNavList = styled.ul<{ isTopOfPage: boolean }>`
+export const DesktopNavList = styled.ul`
   display: flex;
   align-items: center;
   gap: calc(4vw + 1rem);
 
   li > a {
     font-size: ${({ theme }) => theme.typography.fontSize.regular};
-    color: ${({ theme, isTopOfPage }) =>
-      isTopOfPage
-        ? theme.colors.text.secondary.lightest
-        : theme.colors.text.blue[900]};
+    color: ${({ theme }) => theme.colors.text.secondary.lightest};
+
     &.active {
       color: ${({ theme }) => theme.colors.accent.medium};
     }
