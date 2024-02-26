@@ -5,32 +5,28 @@ import {
   HeroTextSection,
   HeroSectionHeader,
   Description,
-  SocialLinks,
 } from "./styles";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { useAnchorLink } from "@/hooks/useAnchorLink";
+import { SelectedPage } from "@/types";
+import SocialLinks from "../SocialLinks";
 
 const Home = () => {
+  const { setSelectedPage } = useAnchorLink();
+
   return (
     <StyledHero id="home">
-      <HeroContainer>
+      <HeroContainer onViewportEnter={() => setSelectedPage(SelectedPage.Home)}>
         <HeroTextSection>
           <HeroSectionHeader>
             <div>We’re Help</div> To Build Your Dream Project
           </HeroSectionHeader>
+
           <Description>
             Agency provides a full service range including technical skills,
             design, business understanding.
           </Description>
 
-          <SocialLinks>
-            <a href="">
-              <FaGithub style={{ fontSize: "1.5rem" }} />
-            </a>
-
-            <a href="">
-              <FaLinkedin style={{ fontSize: "1.5rem" }} />
-            </a>
-          </SocialLinks>
+          <SocialLinks />
         </HeroTextSection>
 
         <div>

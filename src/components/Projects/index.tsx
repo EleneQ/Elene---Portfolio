@@ -4,7 +4,6 @@ import {
   DescriptionContainer,
   GithubLink,
   ImageContainer,
-  ProjectLink,
   ContainerStyled,
   ProjectsStyled,
   ProjectContainer,
@@ -12,8 +11,13 @@ import {
   WaveBottom,
 } from "./styles";
 import { FaGithub } from "react-icons/fa";
+import PrimaryBtn from "../Buttons/primaryBtn";
+import { SelectedPage } from "@/types";
+import { useAnchorLink } from "@/hooks/useAnchorLink";
 
 const Projects = () => {
+  const { setSelectedPage } = useAnchorLink();
+
   return (
     <ProjectsStyled id="projects">
       <WaveTop>
@@ -30,7 +34,9 @@ const Projects = () => {
         </svg>
       </WaveTop>
 
-      <ContainerStyled>
+      <ContainerStyled
+        onViewportEnter={() => setSelectedPage(SelectedPage.Projects)}
+      >
         {/* Project 1 */}
         <ProjectContainer>
           <ImageContainer>
@@ -54,9 +60,9 @@ const Projects = () => {
               <GithubLink href="https://github.com/" target="_blank">
                 <FaGithub style={{ fontSize: "1.7rem" }} />
               </GithubLink>
-              <ProjectLink href="https://github.com/" target="_blank">
-                View Project
-              </ProjectLink>
+              <a href="https://github.com/" target="_blank">
+                <PrimaryBtn>View Project</PrimaryBtn>
+              </a>
             </ActionBtns>
           </div>
         </ProjectContainer>
@@ -84,9 +90,9 @@ const Projects = () => {
               <GithubLink href="https://github.com/" target="_blank">
                 <FaGithub style={{ fontSize: "1.7rem" }} />
               </GithubLink>
-              <ProjectLink href="https://github.com/" target="_blank">
-                View Project
-              </ProjectLink>
+              <a href="https://github.com/" target="_blank">
+                <PrimaryBtn>View Project</PrimaryBtn>
+              </a>
             </ActionBtns>
           </div>
         </ProjectContainer>
@@ -114,9 +120,9 @@ const Projects = () => {
               <GithubLink href="https://github.com/" target="_blank">
                 <FaGithub style={{ fontSize: "1.7rem" }} />
               </GithubLink>
-              <ProjectLink href="https://github.com/" target="_blank">
-                View Project
-              </ProjectLink>
+              <a href="https://github.com/" target="_blank">
+                <PrimaryBtn>View Project</PrimaryBtn>
+              </a>
             </ActionBtns>
           </div>
         </ProjectContainer>

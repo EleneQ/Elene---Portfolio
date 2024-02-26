@@ -73,13 +73,6 @@ export const ErrorText = styled.p`
   color: ${({ theme }) => theme.colors.error};
 `;
 
-export const SubmitButton = styled.button`
-  background-color: ${({ theme }) => theme.colors.accent.medium};
-  color: ${({ theme }) => theme.colors.text.secondary.lightest};
-  padding: 0.6rem 1.5rem;
-  border-radius: 5px;
-`;
-
 export const ImageContainer = styled.div`
   display: none;
 

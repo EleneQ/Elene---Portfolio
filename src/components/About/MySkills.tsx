@@ -1,7 +1,8 @@
 import { skillList } from "@/constants/skillList";
-import { MySkillsStyled, SeeAllBtn } from "./styles";
+import { MySkillsStyled } from "./styles";
 import { useState } from "react";
 import { Tooltip, TooltipParent } from "@/styles/util-styles";
+import PrimaryBtn from "../Buttons/primaryBtn";
 
 const MySkills = () => {
   const maxVisibleSkills = 6;
@@ -34,9 +35,12 @@ const MySkills = () => {
       </ul>
 
       {skillList.length > maxVisibleSkills && (
-        <SeeAllBtn onClick={() => setSeeAllSkills((prev) => !prev)}>
+        <PrimaryBtn
+          style={{ marginTop: "1rem" }}
+          onClick={() => setSeeAllSkills((prev) => !prev)}
+        >
           {seeAllSkills ? "Collapse" : "See All"}
-        </SeeAllBtn>
+        </PrimaryBtn>
       )}
     </MySkillsStyled>
   );

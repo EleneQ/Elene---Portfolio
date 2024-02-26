@@ -103,13 +103,6 @@ export const GithubLink = styled.a`
   color: ${({ theme }) => theme.colors.text.secondary.lightest};
 `;
 
-export const ProjectLink = styled.a`
-  background-color: ${({ theme }) => theme.colors.accent.medium};
-  color: ${({ theme }) => theme.colors.text.secondary.lightest};
-  padding: 0.6rem 1.5rem;
-  border-radius: 5px;
-`;
-
 export const ImageContainer = styled.div`
   height: 300px;
 

@@ -7,28 +7,18 @@ import {
   SectionTitle,
 } from "./styles";
 import MySkills from "./MySkills";
-import { useRef } from "react";
-// import { useAnchorLink } from "@/hooks/useAnchorLink";
-// import { SelectedPage } from "@/types";
-// import { useInView } from "framer-motion";
-// import { useEffect, useRef } from "react";
+import { SelectedPage } from "@/types";
+import { useAnchorLink } from "@/hooks/useAnchorLink";
 
 const About = () => {
-  const ref = useRef<HTMLDivElement>(null);
-  // const { setSelectedPage } = useAnchorLink();
-
-  // const inView = useInView(ref);
-
-  // useEffect(() => {
-  //   if (inView) {
-  //     setSelectedPage(SelectedPage.About);
-  //   }
-  // }, [inView]);
+  const { setSelectedPage } = useAnchorLink();
 
   return (
     <AboutStyled id="about">
-      <AboutContainer>
-        <div ref={ref}>
+      <AboutContainer
+        onViewportEnter={() => setSelectedPage(SelectedPage.About)}
+      >
+        <div>
           <Image src={about} alt="illustrations" />
         </div>
         <TextSection>

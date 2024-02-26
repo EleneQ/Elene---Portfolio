@@ -4,3 +4,8 @@ export enum SelectedPage {
   Projects = "projects",
   Contact = "contact",
 }
+
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  children: React.ReactNode;
+}

@@ -83,11 +83,3 @@ export const MySkillsStyled = styled.div`
     }
   }
 `;
-
-export const SeeAllBtn = styled.button`
-  margin-top: 1rem;
-  background-color: ${({ theme }) => theme.colors.accent.medium};
-  color: ${({ theme }) => theme.colors.text.secondary.lightest};
-  padding: 0.6rem 1.5rem;
-  border-radius: 5px;
-`;

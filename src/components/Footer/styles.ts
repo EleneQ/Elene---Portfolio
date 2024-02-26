@@ -36,9 +36,4 @@ export const BottomSection = styled.div`
     color: ${({ theme }) => theme.colors.text.secondary.lightest};
     font-size: ${({ theme }) => theme.typography.fontSize.small};
   }
-
-  a {
-    color: ${({ theme }) => theme.colors.text.secondary.lightest};
-    margin-left: 1rem;
-  }
 `;

@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import SocialLinks from "../SocialLinks";
 import {
   BottomSection,
   FooterContainer,
@@ -21,15 +21,7 @@ const Footer = () => {
         <BottomSection>
           <p>&copy; Elene Qaldani 2024</p>
 
-          <div>
-            <a href="">
-              <FaGithub style={{ fontSize: "1.5rem" }} />
-            </a>
-
-            <a href="">
-              <FaLinkedin style={{ fontSize: "1.5rem" }} />
-            </a>
-          </div>
+          <SocialLinks />
         </BottomSection>
       </FooterContainer>
     </FooterStyled>

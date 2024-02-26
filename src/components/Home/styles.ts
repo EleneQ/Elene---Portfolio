@@ -36,13 +36,6 @@ export const HeroTextSection = styled.div`
   }
 `;
 
-export const SocialLinks = styled.div`
-  a {
-    color: ${({ theme }) => theme.colors.text.secondary.lightest};
-    margin-right: 1rem;
-  }
-`;
-
 export const HeroSectionHeader = styled.h1`
   color: ${({ theme }) => theme.colors.text.secondary.lightest};
   font-size: ${({ theme }) => theme.typography.fontSize.large2};
