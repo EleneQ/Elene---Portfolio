@@ -89,6 +89,6 @@ export const ImageContainer = styled.div`
 
 export const SuccessMessage = styled(motion.div)`
   position: absolute;
-  top: 30px;
+  top: 35px;
   color: ${({ theme }) => theme.colors.success};
 `;
