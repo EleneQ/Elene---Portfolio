@@ -1,6 +1,7 @@
 import { skillList } from "@/constants/skillList";
 import { MySkillsStyled, SeeAllBtn } from "./styles";
 import { useState } from "react";
+import { Tooltip, TooltipParent } from "@/styles/util-styles";
 
 const MySkills = () => {
   const maxVisibleSkills = 6;
@@ -17,14 +18,17 @@ const MySkills = () => {
       <ul>
         {visibleSkills.map((skill) => (
           <li key={skill.title}>
-            <img
-              src={
-                skill.imgQuery
-                  ? `https://skillicons.dev/icons?i=${skill.imgQuery}`
-                  : skill.imgUrl
-              }
-              alt={skill.title}
-            />
+            <TooltipParent>
+              <img
+                src={
+                  skill.imgQuery
+                    ? `https://skillicons.dev/icons?i=${skill.imgQuery}`
+                    : skill.imgUrl
+                }
+                alt={skill.title}
+              />
+              <Tooltip>{skill.title}</Tooltip>
+            </TooltipParent>
           </li>
         ))}
       </ul>

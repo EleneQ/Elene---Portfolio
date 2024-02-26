@@ -29,3 +29,42 @@ export const SROnly = styled.span`
   white-space: nowrap;
   border-width: 0;
 `;
+
+/* Tooltip */
+export const Tooltip = styled.span`
+  visibility: hidden;
+  width: auto;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 7px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.5s, transform 0.3s;
+  font-size: ${({ theme }) => theme.typography.fontSize.small};
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+  }
+`;
+
+export const TooltipParent = styled.div`
+  position: relative;
+
+  &:hover ${Tooltip} {
+    visibility: visible;
+    opacity: 1;
+  }
+`;

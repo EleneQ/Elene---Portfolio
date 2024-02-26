@@ -5,7 +5,9 @@ import {
   HeroTextSection,
   HeroSectionHeader,
   Description,
+  SocialLinks,
 } from "./styles";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Home = () => {
   return (
@@ -19,6 +21,16 @@ const Home = () => {
             Agency provides a full service range including technical skills,
             design, business understanding.
           </Description>
+
+          <SocialLinks>
+            <a href="">
+              <FaGithub style={{ fontSize: "1.5rem" }} />
+            </a>
+
+            <a href="">
+              <FaLinkedin style={{ fontSize: "1.5rem" }} />
+            </a>
+          </SocialLinks>
         </HeroTextSection>
 
         <div>

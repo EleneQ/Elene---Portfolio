@@ -36,11 +36,17 @@ export const HeroTextSection = styled.div`
   }
 `;
 
+export const SocialLinks = styled.div`
+  a {
+    color: ${({ theme }) => theme.colors.text.secondary.lightest};
+    margin-right: 1rem;
+  }
+`;
+
 export const HeroSectionHeader = styled.h1`
   color: ${({ theme }) => theme.colors.text.secondary.lightest};
   font-size: ${({ theme }) => theme.typography.fontSize.large2};
   font-weight: ${({ theme }) => theme.typography.fontWeight.extraBold};
-  margin-bottom: 1.5rem;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
     position: relative;
@@ -78,7 +84,7 @@ export const Description = styled.p`
   color: ${({ theme }) => theme.colors.text.tertiary.light};
   line-height: 2rem;
   max-width: 430px;
-  margin-inline: auto;
+  margin: 1rem auto;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
     max-width: 470px;
