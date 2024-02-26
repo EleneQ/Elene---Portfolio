@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const ContactContainer = styled(Container)`
   text-align: center;
-  padding-block: 4rem;
+  padding-block: 6rem;
 
   h2 {
     color: ${({ theme }) => theme.colors.text.primary.dark};

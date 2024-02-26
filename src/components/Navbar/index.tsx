@@ -8,20 +8,35 @@ import {
   HamburgerMenu,
   MobileNavbar,
 } from "./styles";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import { useTheme } from "styled-components";
 import { SROnly } from "@/styles/util-styles";
 import { navLinks } from "@/constants/navLinks";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const theme = useTheme();
-  const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isTopOfPage, setIsTopOfPage] = useState(true);
 
   const isBigScreen = useMediaQuery(`(min-width: ${theme.breakpoints.sm})`);
 
+  const handleScroll = () => {
+    if (window.scrollY <= 70) {
+      setIsTopOfPage(true);
+    } else {
+      setIsTopOfPage(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <StyledHeader>
+    <StyledHeader isTopOfPage={isTopOfPage}>
       <NavbarContainer>
         <StyledLogoContainer>
           <img src={logo} alt="logo" />
@@ -30,7 +45,7 @@ const Navbar = () => {
 
         {isBigScreen ? (
           <nav>
-            <DesktopNavList>
+            <DesktopNavList isTopOfPage={isTopOfPage}>
               {navLinks.map((navLink) => (
                 <li key={navLink}>
                   <Link page={`${navLink}`} />
@@ -43,13 +58,13 @@ const Navbar = () => {
             <HamburgerMenu
               htmlFor="menu-checkbox"
               aria-controls="primary-navigation"
-              aria-expanded={mobileMenuIsOpen}
+              aria-expanded={isMobileMenuOpen}
             >
               <input
                 type="checkbox"
                 id="menu-checkbox"
-                checked={mobileMenuIsOpen}
-                onChange={() => setMobileMenuIsOpen((prev) => !prev)}
+                checked={isMobileMenuOpen}
+                onChange={() => setIsMobileMenuOpen((prev) => !prev)}
               />
               <span />
               <span />
@@ -57,13 +72,22 @@ const Navbar = () => {
               <SROnly>Menu</SROnly>
             </HamburgerMenu>
 
-            {mobileMenuIsOpen && (
-              <MobileNavbar>
+            {isMobileMenuOpen && (
+              <MobileNavbar
+                initial={{ y: "60%" }}
+                animate={{ y: 0 }}
+                transition={{ duration: 0.5, type: "spring", stiffness: 120 }}
+              >
                 <ul>
-                  {navLinks.map((navLink) => (
-                    <li key={navLink}>
+                  {navLinks.map((navLink, index) => (
+                    <motion.li
+                      key={navLink}
+                      initial={{ opacity: 0, y: 50 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: index * 0.1, duration: 0.5 }}
+                    >
                       <Link page={`${navLink}`} />
-                    </li>
+                    </motion.li>
                   ))}
                 </ul>
               </MobileNavbar>

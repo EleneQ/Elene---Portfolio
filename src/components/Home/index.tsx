@@ -6,16 +6,13 @@ import {
   HeroSectionHeader,
   Description,
 } from "./styles";
-import { useAnchorLink } from "@/hooks/useAnchorLink";
-import { SelectedPage } from "@/types";
 import SocialLinks from "../SocialLinks";
 
 const Home = () => {
-  const { setSelectedPage } = useAnchorLink();
 
   return (
     <StyledHero id="home">
-      <HeroContainer onViewportEnter={() => setSelectedPage(SelectedPage.Home)}>
+      <HeroContainer>
         <HeroTextSection>
           <HeroSectionHeader>
             <div>We’re Help</div> To Build Your Dream Project

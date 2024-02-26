@@ -7,16 +7,12 @@ import {
   SectionTitle,
 } from "./styles";
 import MySkills from "./MySkills";
-import { SelectedPage } from "@/types";
-import { useAnchorLink } from "@/hooks/useAnchorLink";
 
 const About = () => {
-  const { setSelectedPage } = useAnchorLink();
 
   return (
     <AboutStyled id="about">
       <AboutContainer
-        onViewportEnter={() => setSelectedPage(SelectedPage.About)}
       >
         <div>
           <Image src={about} alt="illustrations" />

@@ -12,12 +12,8 @@ import {
 } from "./styles";
 import { FaGithub } from "react-icons/fa";
 import PrimaryBtn from "../Buttons/primaryBtn";
-import { SelectedPage } from "@/types";
-import { useAnchorLink } from "@/hooks/useAnchorLink";
 
 const Projects = () => {
-  const { setSelectedPage } = useAnchorLink();
-
   return (
     <ProjectsStyled id="projects">
       <WaveTop>
@@ -34,9 +30,7 @@ const Projects = () => {
         </svg>
       </WaveTop>
 
-      <ContainerStyled
-        onViewportEnter={() => setSelectedPage(SelectedPage.Projects)}
-      >
+      <ContainerStyled>
         {/* Project 1 */}
         <ProjectContainer>
           <ImageContainer>

@@ -10,12 +10,8 @@ import {
 } from "./styles";
 import formImg from "@/images/formImg.png";
 import PrimaryBtn from "../Buttons/primaryBtn";
-import { SelectedPage } from "@/types";
-import { useAnchorLink } from "@/hooks/useAnchorLink";
 
 const Contact = () => {
-  const { setSelectedPage } = useAnchorLink();
-
   const {
     register,
     trigger,
@@ -33,7 +29,7 @@ const Contact = () => {
   return (
     <section id="contact">
       <ContactContainer
-        onViewportEnter={() => setSelectedPage(SelectedPage.Contact)}
+       
       >
         <h2>Send me a message!</h2>
 
