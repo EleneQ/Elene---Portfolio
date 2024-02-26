@@ -1,4 +1,5 @@
 import { Container } from "@/styles/util-styles";
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const ContactContainer = styled(Container)`
@@ -27,6 +28,7 @@ export const ContactContent = styled.div`
 `;
 
 export const FormStyled = styled.form`
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -83,4 +85,10 @@ export const ImageContainer = styled.div`
       max-height: 440px;
     }
   }
+`;
+
+export const SuccessMessage = styled(motion.div)`
+  position: absolute;
+  top: 30px;
+  color: ${({ theme }) => theme.colors.success};
 `;

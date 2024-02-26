@@ -21,6 +21,9 @@ const colorTokens = {
     400: "rgba(255, 255, 255, 0.64)",
     500: "rgba(57, 20, 0, 0.64)",
   },
+  green: {
+    500: "#008000",
+  },
 };
 
 const theme: DefaultTheme = {
@@ -56,6 +59,7 @@ const theme: DefaultTheme = {
       medium: colorTokens.red[500],
     },
     error: colorTokens.red[600],
+    success: colorTokens.green[500],
   },
   typography: {
     fontFamily: {

@@ -34,6 +34,7 @@ declare module "styled-components" {
         medium: string;
       };
       error: string;
+      success: string;
     };
 
     typography: {

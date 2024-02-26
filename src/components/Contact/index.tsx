@@ -1,4 +1,4 @@
-import { FormEvent, useRef } from "react";
+import { useState, FormEvent, useRef } from "react";
 import { useForm } from "react-hook-form";
 import {
   ContactContainer,
@@ -7,14 +7,16 @@ import {
   FormStyled,
   ImageContainer,
   InputContainer,
+  SuccessMessage,
 } from "./styles";
 import formImg from "@/images/formImg.png";
 import PrimaryBtn from "../Buttons/primaryBtn";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const form = useRef<HTMLFormElement>(null);
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
   const {
     register,
@@ -39,7 +41,9 @@ const Contact = () => {
         )
         .then(
           () => {
+            setShowSuccessMessage(true);
             reset();
+            setTimeout(() => setShowSuccessMessage(false), 3000);
           },
           (error) => {
             console.log("FAILED...", error.text);
@@ -54,13 +58,7 @@ const Contact = () => {
         <h2>Send me a message!</h2>
 
         <ContactContent>
-          <FormStyled
-            ref={form}
-            onSubmit={onSubmitHandler}
-            // action="https://formsubmit.co/ca0b86c13d72fb2c60603b79480c24ac"
-            // target="_blank"
-            // method="POST"
-          >
+          <FormStyled ref={form} onSubmit={onSubmitHandler}>
             <InputContainer>
               <input
                 type="text"
@@ -117,6 +115,18 @@ const Contact = () => {
             </InputContainer>
 
             <PrimaryBtn type="submit">SUBMIT</PrimaryBtn>
+
+            <AnimatePresence>
+              {showSuccessMessage && (
+                <SuccessMessage
+                  initial={{ x: -100, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1, transition: { duration: 0.5 } }}
+                  exit={{ x: -100, opacity: 0, transition: { duration: 0.5 } }}
+                >
+                  Message sent successfully!
+                </SuccessMessage>
+              )}
+            </AnimatePresence>
           </FormStyled>
 
           <ImageContainer>
