@@ -1,5 +1,4 @@
 import logo from "@/images/logo.svg";
-import Link from "./Link";
 import {
   StyledHeader,
   NavbarContainer,
@@ -7,6 +6,7 @@ import {
   StyledLogoContainer,
   HamburgerMenu,
   MobileNavbar,
+  LinkStyled,
 } from "./styles";
 import { useEffect, useState } from "react";
 import useMediaQuery from "@/hooks/useMediaQuery";
@@ -47,7 +47,9 @@ const Navbar = () => {
             <DesktopNavList>
               {navLinks.map((navLink) => (
                 <li key={navLink}>
-                  <Link page={`${navLink}`} />
+                  <LinkStyled href={`#${navLink.toLowerCase()}`}>
+                    {navLink}
+                  </LinkStyled>
                 </li>
               ))}
             </DesktopNavList>
@@ -85,7 +87,9 @@ const Navbar = () => {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: index * 0.1, duration: 0.5 }}
                     >
-                      <Link page={`${navLink}`} />
+                      <LinkStyled href={`#${navLink.toLowerCase()}`}>
+                        {navLink}
+                      </LinkStyled>
                     </motion.li>
                   ))}
                 </ul>

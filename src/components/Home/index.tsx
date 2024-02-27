@@ -5,30 +5,40 @@ import {
   HeroTextSection,
   HeroSectionHeader,
   Description,
+  ImageSection,
 } from "./styles";
 import SocialLinks from "../SocialLinks";
+import { useTheme } from "styled-components";
+import useMediaQuery from "@/hooks/useMediaQuery";
 
 const Home = () => {
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`);
 
   return (
     <StyledHero id="home">
       <HeroContainer>
         <HeroTextSection>
           <HeroSectionHeader>
-            <div>We’re Help</div> To Build Your Dream Project
+            Full-stack
+            <div>Developer.</div>
           </HeroSectionHeader>
 
           <Description>
-            Agency provides a full service range including technical skills,
-            design, business understanding.
+            Hi, I'm Elene. I love creating scalable, adaptable front-end and
+            full-stack projects. My passion is helping people turn their ideas
+            into reality.
           </Description>
 
-          <SocialLinks />
+          <SocialLinks
+            style={{ justifyContent: isSmallScreen ? "center" : "" }}
+          />
         </HeroTextSection>
 
-        <div>
+        <ImageSection>
           <img src={heroBackground} alt="illustration of hobbies" />
-        </div>
+          <div className="blob" />
+        </ImageSection>
       </HeroContainer>
     </StyledHero>
   );

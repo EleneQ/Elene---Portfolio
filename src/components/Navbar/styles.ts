@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Container } from "@/styles/util-styles";
 import { motion } from "framer-motion";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 export const StyledHeader = styled.header<{ isTopOfPage: boolean }>`
   position: fixed;
@@ -13,6 +14,15 @@ export const StyledHeader = styled.header<{ isTopOfPage: boolean }>`
   box-shadow: ${({ isTopOfPage }) =>
     isTopOfPage ? "" : "rgba(0, 0, 0, 0.45) 0px 5px 15px"};
   transition: background-color 0.3s ease-in-out;
+`;
+
+export const LinkStyled = styled(AnchorLink)`
+  color: ${({ theme }) => theme.colors.text.secondary.lightest};
+  transition: color 0.2s ease-in-out;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.accent.medium};
+  }
 `;
 
 export const NavbarContainer = styled(Container)`
@@ -38,15 +48,6 @@ export const DesktopNavList = styled.ul`
   display: flex;
   align-items: center;
   gap: calc(4vw + 1rem);
-
-  li > a {
-    font-size: ${({ theme }) => theme.typography.fontSize.regular};
-    color: ${({ theme }) => theme.colors.text.secondary.lightest};
-
-    &.active {
-      color: ${({ theme }) => theme.colors.accent.medium};
-    }
-  }
 `;
 
 /* SMALL SCREENS */

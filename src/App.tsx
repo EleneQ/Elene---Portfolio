@@ -7,22 +7,19 @@ import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Projects from "@/components/Projects";
 import Footer from "@/components/Footer";
-import { AnchorLinkProvider } from "./context/anchorLink";
 
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
-      <AnchorLinkProvider>
-        <CSSReset />
-        <Navbar />
-        <main>
-          <Home />
-          <About />
-          <Projects />
-          <Contact />
-          <Footer />
-        </main>
-      </AnchorLinkProvider>
+      <CSSReset />
+      <Navbar />
+      <main>
+        <Home />
+        <About />
+        <Projects />
+        <Contact />
+        <Footer />
+      </main>
     </ThemeProvider>
   );
 };

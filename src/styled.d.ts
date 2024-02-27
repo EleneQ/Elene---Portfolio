@@ -53,6 +53,7 @@ declare module "styled-components" {
         small: string;
         regular: string;
         medium: string;
+        medium2: string;
         large1: string;
         large2: string;
         large3: string;

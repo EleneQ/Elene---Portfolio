@@ -6,6 +6,7 @@ export const skillList = [
   { title: "TypeScript", imgQuery: "ts" },
   { title: "React", imgQuery: "react" },
   { title: "Tailwind", imgQuery: "tailwind" },
+  { title: "Bootstrap", imgQuery: "bootstrap" },
   { title: "Material UI", imgQuery: "mui" },
   { title: "Styled Components", imgQuery: "styledcomponents" },
   { title: "Figma", imgQuery: "figma" },

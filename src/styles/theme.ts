@@ -76,7 +76,8 @@ const theme: DefaultTheme = {
     fontSize: {
       small: "0.875rem", //14px
       regular: "1rem", //16px
-      medium: "1.25rem", //20px
+      medium: "1.125rem", //18px
+      medium2: "1.25rem", //20px
       large1: "1.5rem", //24px
       large2: "2.5rem", //40px
       large3: "3.5rem", //56px

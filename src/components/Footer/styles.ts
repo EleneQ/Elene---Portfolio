@@ -18,7 +18,7 @@ export const TopSection = styled.div`
   p {
     color: ${({ theme }) => theme.colors.accent.medium};
     font-weight: ${({ theme }) => theme.typography.fontWeight.medium};
-    font-size: ${({ theme }) => theme.typography.fontSize.medium};
+    font-size: ${({ theme }) => theme.typography.fontSize.medium2};
     margin-bottom: 2rem;
   }
 
