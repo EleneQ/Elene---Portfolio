@@ -20,7 +20,7 @@ const Home = () => {
       <HeroContainer>
         <HeroTextSection>
           <HeroSectionHeader>
-            Full-stack
+            Full-Stack
             <div>Developer.</div>
           </HeroSectionHeader>
 

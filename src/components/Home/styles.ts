@@ -61,8 +61,8 @@ export const ImageSection = styled.div`
     z-index: 2;
 
     @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
-      bottom: 110px;
-      right: 30px;
+      bottom: 125px;
+      right: 50px;
     }
   }
 
