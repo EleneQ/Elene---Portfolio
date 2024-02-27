@@ -7,8 +7,7 @@ import {
   ContainerStyled,
   ProjectsStyled,
   ProjectContainer,
-  WaveTop,
-  WaveBottom,
+  Wave,
 } from "./styles";
 import { FaGithub } from "react-icons/fa";
 import PrimaryBtn from "../Buttons/primaryBtn";
@@ -16,7 +15,7 @@ import PrimaryBtn from "../Buttons/primaryBtn";
 const Projects = () => {
   return (
     <ProjectsStyled id="projects">
-      <WaveTop>
+      <Wave className="wave-top">
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
@@ -28,7 +27,7 @@ const Projects = () => {
             className="shape-fill"
           ></path>
         </svg>
-      </WaveTop>
+      </Wave>
 
       <ContainerStyled>
         {/* Project 1 */}
@@ -122,7 +121,7 @@ const Projects = () => {
         </ProjectContainer>
       </ContainerStyled>
 
-      <WaveBottom>
+      <Wave className="wave-bottom">
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
@@ -134,7 +133,7 @@ const Projects = () => {
             className="shape-fill"
           ></path>
         </svg>
-      </WaveBottom>
+      </Wave>
     </ProjectsStyled>
   );
 };

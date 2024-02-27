@@ -134,7 +134,7 @@ export const HeroSectionHeader = styled.h1`
 
 export const Description = styled.p`
   color: ${({ theme }) => theme.colors.text.tertiary.light};
-  line-height: 1.78em;
+  line-height: 1.7em;
   max-width: 430px;
   margin: 1rem auto;
 

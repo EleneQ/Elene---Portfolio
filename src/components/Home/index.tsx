@@ -31,7 +31,10 @@ const Home = () => {
           </Description>
 
           <SocialLinks
-            style={{ justifyContent: isSmallScreen ? "center" : "" }}
+            style={{
+              marginTop: "1.5rem",
+              justifyContent: isSmallScreen ? "center" : "",
+            }}
           />
         </HeroTextSection>
 

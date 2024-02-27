@@ -12,30 +12,8 @@ export const ProjectsStyled = styled.section`
   }
 `;
 
-export const WaveTop = styled.div`
+export const Wave = styled.div`
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  z-index: 2;
-
-  svg {
-    position: relative;
-    display: block;
-    width: calc(142% + 1.3px);
-    height: 90px;
-  }
-
-  .shape-fill {
-    fill: ${({ theme }) => theme.colors.background.secondary};
-  }
-`;
-
-export const WaveBottom = styled.div`
-  position: absolute;
-  bottom: 0;
   left: 0;
   width: 100%;
   overflow: hidden;
@@ -44,12 +22,32 @@ export const WaveBottom = styled.div`
   svg {
     position: relative;
     display: block;
-    width: calc(122% + 1.3px);
-    height: 60px;
   }
 
-  .shape-fill {
-    fill: white;
+  &.wave-top {
+    top: -1px;
+
+    svg {
+      width: calc(142% + 1.3px);
+      height: 90px;
+    }
+
+    .shape-fill {
+      fill: ${({ theme }) => theme.colors.background.secondary};
+    }
+  }
+
+  &.wave-bottom {
+    bottom: -1px;
+
+    svg {
+      width: calc(122% + 1.3px);
+      height: 60px;
+    }
+
+    .shape-fill {
+      fill: white;
+    }
   }
 `;
 
