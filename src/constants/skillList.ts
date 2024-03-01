@@ -9,6 +9,7 @@ export const skillList = [
   { title: "Bootstrap", imgQuery: "bootstrap" },
   { title: "Material UI", imgQuery: "mui" },
   { title: "Styled Components", imgQuery: "styledcomponents" },
+  { title: "Redux Toolkit", imgQuery: "redux" },
   { title: "Figma", imgQuery: "figma" },
   { title: "Github", imgQuery: "github" },
   { title: "C#", imgQuery: "c#" },

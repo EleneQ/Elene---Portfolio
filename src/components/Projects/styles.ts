@@ -59,10 +59,6 @@ export const ContainerStyled = styled(Container)`
   }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
-    & > *:not(:first-child) {
-      margin-top: 2rem;
-    }
-
     & > *:nth-child(odd) {
       & > :first-child {
         order: 2;
@@ -91,22 +87,23 @@ export const ProjectContainer = styled.div`
   }
 `;
 
-export const ActionBtns = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-`;
-
-export const GithubLink = styled.a`
-  color: ${({ theme }) => theme.colors.text.secondary.lightest};
-`;
-
 export const ImageContainer = styled.div`
-  height: 300px;
+  height: 330px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 40px;
 
   img {
     height: 100%;
+    width: 100%;
+    border-radius: inherit;
+    object-position: top;
     object-fit: cover;
+    transition-duration: 13s;
+    transition-delay: 0.1s;
+
+    &:hover {
+      object-position: bottom;
+    }
   }
 `;
 
@@ -124,4 +121,32 @@ export const DescriptionContainer = styled.div`
     font-size: 15px;
     line-height: 1.5em;
   }
+`;
+
+export const ToolList = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.3rem;
+
+  li {
+    background-color: ${({ theme }) => theme.colors.background.tertiary};
+    color: ${({ theme }) => theme.colors.text.blue[900]};
+    padding: 0.2rem 0.8rem;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px;
+    font-size: ${({ theme }) => theme.typography.fontSize.small};
+    font-weight: ${({ theme }) => theme.typography.fontWeight.medium};
+  }
+`;
+
+export const ActionBtns = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+`;
+
+export const GithubLink = styled.a`
+  color: ${({ theme }) => theme.colors.text.secondary.lightest};
 `;

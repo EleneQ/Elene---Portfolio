@@ -28,7 +28,12 @@ export const LinksStyled = styled.div`
 
 const Link = ({ href, children }: LinkProps) => {
   return (
-    <motion.a href={href} whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
+    <motion.a
+      href={href}
+      target="_blank"
+      whileHover={{ scale: 1.2 }}
+      whileTap={{ scale: 0.9 }}
+    >
       {children}
     </motion.a>
   );
@@ -37,10 +42,10 @@ const Link = ({ href, children }: LinkProps) => {
 const SocialLinks = ({ className, style }: SocialLinksProps) => {
   return (
     <LinksStyled className={className} style={style}>
-      <Link href="">
+      <Link href="https://github.com/EleneQ">
         <FaGithub />
       </Link>
-      <Link href="">
+      <Link href="https://www.linkedin.com/in/elene-qaldani-1a46a1283/?originalSubdomain=ge">
         <FaLinkedin />
       </Link>
     </LinksStyled>

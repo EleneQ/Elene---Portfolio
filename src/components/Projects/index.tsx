@@ -1,4 +1,4 @@
-import project from "@/images/project.png";
+import { FaGithub } from "react-icons/fa";
 import {
   ActionBtns,
   DescriptionContainer,
@@ -8,9 +8,12 @@ import {
   ProjectsStyled,
   ProjectContainer,
   Wave,
+  ToolList,
 } from "./styles";
-import { FaGithub } from "react-icons/fa";
 import PrimaryBtn from "../Buttons/primaryBtn";
+import monito from "@/images/monito.png";
+import foodieland from "@/images/foodieland.png";
+import hekto from "@/images/hekto.png";
 
 const Projects = () => {
   return (
@@ -33,27 +36,37 @@ const Projects = () => {
         {/* Project 1 */}
         <ProjectContainer>
           <ImageContainer>
-            <img src={project} alt="" />
+            <img src={monito} alt="monito" loading="lazy" />
           </ImageContainer>
 
           <div>
-            <h2>Example Project Name</h2>
+            <h2>Mointo 🐕‍🦺 - Pet Adoption Agency</h2>
 
             <DescriptionContainer>
               <p>
-                A web app for visualizing personalized Spotify data. View your
-                top artists, top tracks, recently played tracks, and detailed
-                audio information about each track. Create and save new
-                playlists of recommended tracks based on your existing playlists
-                and more.
+                Monito is a pet adoption agency committed to making adoption
+                accessible worldwide. The website features a user-friendly
+                interface designed to streamline the search process, enabling
+                users to discover their ideal pets effortlessly. Monito helps
+                make pet adoption a straightforward and enjoyable process.
               </p>
+
+              <ToolList>
+                <li>React</li>
+                <li>TypeScript</li>
+                <li>Tailwind</li>
+                <li>Sass / Scss</li>
+              </ToolList>
             </DescriptionContainer>
 
             <ActionBtns>
-              <GithubLink href="https://github.com/" target="_blank">
+              <GithubLink
+                href="https://github.com/EleneQ/Monito---Pet-Adoption-Agency"
+                target="_blank"
+              >
                 <FaGithub style={{ fontSize: "1.7rem" }} />
               </GithubLink>
-              <a href="https://github.com/" target="_blank">
+              <a href="https://monito.pages.dev/" target="_blank">
                 <PrimaryBtn>View Project</PrimaryBtn>
               </a>
             </ActionBtns>
@@ -63,27 +76,38 @@ const Projects = () => {
         {/* Project 2 */}
         <ProjectContainer>
           <ImageContainer>
-            <img src={project} alt="" />
+            <img src={foodieland} alt="foodieland" loading="lazy" />
           </ImageContainer>
 
           <div>
-            <h2>Example Project Name</h2>
+            <h2>Foodieland 🍕 - Recipes</h2>
 
             <DescriptionContainer>
               <p>
-                A web app for visualizing personalized Spotify data. View your
-                top artists, top tracks, recently played tracks, and detailed
-                audio information about each track. Create and save new
-                playlists of recommended tracks based on your existing playlists
-                and more.
+                Foodieland serves as a digital hub for meal and cocktail
+                recipes, offering a user-friendly interface to search and filter
+                through a wide array of recipes. With just a click of a button,
+                users can uncover new flavors and experience the joy of culinary
+                discovery right in their own kitchen. Foodieland is an
+                all-in-one destination for culinary inspiration and exploration.
               </p>
+
+              <ToolList>
+                <li>React</li>
+                <li>Rest API</li>
+                <li>Tailwind</li>
+                <li>Sass / Scss</li>
+              </ToolList>
             </DescriptionContainer>
 
             <ActionBtns>
-              <GithubLink href="https://github.com/" target="_blank">
+              <GithubLink
+                href="https://github.com/EleneQ/Foodieland---recipes-and-cocktails"
+                target="_blank"
+              >
                 <FaGithub style={{ fontSize: "1.7rem" }} />
               </GithubLink>
-              <a href="https://github.com/" target="_blank">
+              <a href="https://foodieland-recipe.netlify.app/" target="_blank">
                 <PrimaryBtn>View Project</PrimaryBtn>
               </a>
             </ActionBtns>
@@ -93,27 +117,45 @@ const Projects = () => {
         {/* Project 3 */}
         <ProjectContainer>
           <ImageContainer>
-            <img src={project} alt="" />
+            <img src={hekto} alt="hekto" loading="lazy" />
           </ImageContainer>
 
           <div>
-            <h2>Example Project Name</h2>
+            <h2>Hekto 👒 - eCommerce</h2>
 
             <DescriptionContainer>
               <p>
-                A web app for visualizing personalized Spotify data. View your
-                top artists, top tracks, recently played tracks, and detailed
-                audio information about each track. Create and save new
-                playlists of recommended tracks based on your existing playlists
-                and more.
+                Hekto is an eCommerce platform. It provides a user-friendly
+                interface that helps visitors filter, search and sort through
+                all products. Users can register or login, review each product,
+                add to card, pay using Stripe webhooks and ship to their
+                address.
+                <div style={{ marginTop: "1rem" }}>
+                  For the admin, Hekto has a lot of special functionality, such
+                  as creating and editing products, viewing all users, orders
+                  and products, marking orders as delivered, etc.
+                </div>
               </p>
+
+              <ToolList>
+                <li>React</li>
+                <li>Redux Toolkit</li>
+                <li>Material UI</li>
+                <li>Node</li>
+                <li>Express</li>
+                <li>MongoDB</li>
+                <li>Stripe</li>
+              </ToolList>
             </DescriptionContainer>
 
             <ActionBtns>
-              <GithubLink href="https://github.com/" target="_blank">
+              <GithubLink
+                href="https://github.com/EleneQ/Hekto---eCommerce-Store"
+                target="_blank"
+              >
                 <FaGithub style={{ fontSize: "1.7rem" }} />
               </GithubLink>
-              <a href="https://github.com/" target="_blank">
+              <a href="https://hekto-0me9.onrender.com/" target="_blank">
                 <PrimaryBtn>View Project</PrimaryBtn>
               </a>
             </ActionBtns>

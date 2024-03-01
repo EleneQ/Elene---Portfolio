@@ -11,7 +11,7 @@ const Footer = () => {
     <FooterStyled>
       <FooterContainer>
         <TopSection>
-          <p>Say Hello 👇</p>
+          <p>Say Hello 👋</p>
 
           <a href="mailto:eleneqaldani1@gmail.com">eleneqaldani1@gmail.com</a>
         </TopSection>

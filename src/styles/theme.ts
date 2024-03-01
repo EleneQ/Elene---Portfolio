@@ -38,6 +38,7 @@ const theme: DefaultTheme = {
     background: {
       primary: colorTokens.blue[900],
       secondary: colorTokens.pink[300],
+      tertiary: colorTokens.gray[400],
     },
     text: {
       primary: {
