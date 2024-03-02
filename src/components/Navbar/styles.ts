@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { Container } from "@/styles/util-styles";
 import { motion } from "framer-motion";
-import AnchorLink from "react-anchor-link-smooth-scroll";
 
 export const StyledHeader = styled.header<{ isTopOfPage: boolean }>`
   position: fixed;
@@ -16,21 +15,18 @@ export const StyledHeader = styled.header<{ isTopOfPage: boolean }>`
   transition: background-color 0.3s ease-in-out;
 `;
 
-export const LinkStyled = styled(AnchorLink)`
-  color: ${({ theme }) => theme.colors.text.secondary.lightest};
-  transition: color 0.2s ease-in-out;
-
-  &:hover {
-    color: ${({ theme }) => theme.colors.accent.medium};
-  }
-`;
-
 export const NavbarContainer = styled(Container)`
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-block: 1rem;
   max-width: none;
+
+  .cv-link {
+    border: 2px solid ${({ theme }) => theme.colors.accent.medium};
+    border-radius: 3px;
+    padding: 0.45rem;
+  }
 `;
 
 export const StyledLogoContainer = styled.div`
@@ -48,6 +44,15 @@ export const DesktopNavList = styled.ul`
   display: flex;
   align-items: center;
   gap: calc(4vw + 1rem);
+
+  .nav-link {
+    color: ${({ theme }) => theme.colors.text.secondary.lightest};
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      color: ${({ theme }) => theme.colors.accent.medium};
+    }
+  }
 `;
 
 /* SMALL SCREENS */
@@ -59,6 +64,7 @@ export const MobileNavbar = styled(motion.nav)`
   padding-inline: 5rem;
   padding-block: 3rem;
   background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.3) 0px 5px 20px 0px;
 
   li {
     &:not(:last-child) {

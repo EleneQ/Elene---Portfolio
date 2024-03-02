@@ -6,21 +6,38 @@ import {
   StyledLogoContainer,
   HamburgerMenu,
   MobileNavbar,
-  LinkStyled,
 } from "./styles";
 import { useEffect, useState } from "react";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import { useTheme } from "styled-components";
 import { SROnly } from "@/styles/util-styles";
 import { navLinks } from "@/constants/navLinks";
 import { motion } from "framer-motion";
 
+interface CVLinkProps {
+  setIsMobileMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const CVLink = ({ setIsMobileMenuOpen }: CVLinkProps) => {
+  return (
+    <a
+      className="nav-link cv-link"
+      href="https://www.dropbox.com/scl/fi/e3fcwqhk3x25akomqm7dm/Resume.pdf?rlkey=l1sq3r4sl4kd78c7wuugvo6ji&dl=0"
+      target="_blank"
+      onClick={() => setIsMobileMenuOpen(false)}
+    >
+      CV
+    </a>
+  );
+};
+
 const Navbar = () => {
   const theme = useTheme();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isTopOfPage, setIsTopOfPage] = useState(true);
 
-  const isBigScreen = useMediaQuery(`(min-width: ${theme.breakpoints.sm})`);
+  const isBigScreen = useMediaQuery(`(min-width: ${theme.breakpoints.md})`);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -47,11 +64,17 @@ const Navbar = () => {
             <DesktopNavList>
               {navLinks.map((navLink) => (
                 <li key={navLink}>
-                  <LinkStyled href={`#${navLink.toLowerCase()}`}>
+                  <AnchorLink
+                    className="nav-link"
+                    href={`#${navLink.toLowerCase()}`}
+                  >
                     {navLink}
-                  </LinkStyled>
+                  </AnchorLink>
                 </li>
               ))}
+              <li>
+                <CVLink setIsMobileMenuOpen={setIsMobileMenuOpen} />
+              </li>
             </DesktopNavList>
           </nav>
         ) : (
@@ -87,14 +110,24 @@ const Navbar = () => {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: index * 0.1, duration: 0.5 }}
                     >
-                      <LinkStyled
+                      <AnchorLink
+                        className="nav-link"
                         href={`#${navLink.toLowerCase()}`}
-                        onClick={() => setIsMobileMenuOpen(false)}
                       >
                         {navLink}
-                      </LinkStyled>
+                      </AnchorLink>
                     </motion.li>
                   ))}
+                  <motion.li
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{
+                      delay: (navLinks.length + 1) * 0.1,
+                      duration: 0.5,
+                    }}
+                  >
+                    <CVLink setIsMobileMenuOpen={setIsMobileMenuOpen} />
+                  </motion.li>
                 </ul>
               </MobileNavbar>
             )}

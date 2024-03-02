@@ -99,7 +99,7 @@ export const ImageContainer = styled.div`
     border-radius: inherit;
     object-position: top;
     object-fit: cover;
-    transition-duration: 13s;
+    transition-duration: 10s;
     transition-delay: 0.1s;
 
     &:hover {

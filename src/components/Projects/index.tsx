@@ -149,6 +149,8 @@ const Projects = () => {
                 <li>Express</li>
                 <li>MongoDB</li>
                 <li>Stripe</li>
+                <li>JWT</li>
+                <li>Mongoose</li>
               </ToolList>
             </DescriptionContainer>
 
