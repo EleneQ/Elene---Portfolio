@@ -44,7 +44,7 @@ export const TextSection = styled.div`
 
   p {
     color: ${({ theme }) => theme.colors.text.primary.medium};
-    line-height: 2em;
+    line-height: 1.6em;
   }
 `;
 

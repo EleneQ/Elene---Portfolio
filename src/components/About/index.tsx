@@ -21,9 +21,11 @@ const About = () => {
           <div>
             <SectionTitle>An Experienced Programmer</SectionTitle>
             <p>
-              Ability to put themselves in the merchant's shoes. It is meant to
-              partner on the long run, and work as an extension of the
-              merchant's team.
+              Hi👋 I'm Elene, a full-stack developer from Georgia. I love art and
+              creating beautiful, easy-to-use websites. I started out as a game
+              developer using Unity and, after gaining some experience working
+              in the industry, I transitioned into web development - my true
+              passion.
             </p>
           </div>
 

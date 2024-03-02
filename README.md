@@ -11,6 +11,7 @@ Credits for the design: [Laaqiq.design](https://www.figma.com/community/file/106
 &raquo; React <br>
 &raquo; TypeScript <br>
 &raquo; Styled Components <br>
+&raquo; Framer Motion <br>
 &raquo; EmailJS <br>
 
 ## Screenshot 📸
