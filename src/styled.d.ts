@@ -54,7 +54,9 @@ declare module "styled-components" {
         black: number;
       };
       fontSize: {
+        smallest: string;
         small: string;
+        small2: string;
         regular: string;
         medium: string;
         medium2: string;

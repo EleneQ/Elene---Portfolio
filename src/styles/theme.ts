@@ -79,7 +79,9 @@ const theme: DefaultTheme = {
       black: 900,
     },
     fontSize: {
+      smallest: "0.8125rem", //13px
       small: "0.875rem", //14px
+      small2: "0.9375rem", //15px
       regular: "1rem", //16px
       medium: "1.125rem", //18px
       medium2: "1.25rem", //20px

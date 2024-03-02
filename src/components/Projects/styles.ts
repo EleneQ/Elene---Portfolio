@@ -115,8 +115,17 @@ export const DescriptionContainer = styled.div`
 
   p {
     color: ${({ theme }) => theme.colors.text.tertiary.light};
-    font-size: 15px;
+    font-size: ${({ theme }) => theme.typography.fontSize.small2};
     line-height: 1.5em;
+
+    div {
+      margin-top: 1rem;
+    }
+
+    .ps-text {
+      color: ${({ theme }) => theme.colors.text.secondary.lightest};
+      font-size: ${({ theme }) => theme.typography.fontSize.smallest};
+    }
   }
 `;
 

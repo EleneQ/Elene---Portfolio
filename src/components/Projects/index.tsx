@@ -130,10 +130,14 @@ const Projects = () => {
                 all products. Users can register or login, review each product,
                 add to card, pay using Stripe webhooks and ship to their
                 address.
-                <div style={{ marginTop: "1rem" }}>
+                <div>
                   For the admin, Hekto has a lot of special functionality, such
                   as creating and editing products, viewing all users, orders
                   and products, marking orders as delivered, etc.
+                </div>
+                <div className="ps-text">
+                  P.S. Hekto's deployed on Render.com, so it might take some
+                  time to load the 1st time you visit it.
                 </div>
               </p>
 
