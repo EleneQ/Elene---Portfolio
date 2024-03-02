@@ -2,7 +2,7 @@ import { Container } from "@/styles/util-styles";
 import styled from "styled-components";
 
 export const ProjectsStyled = styled.section`
-  background-color: ${({ theme }) => theme.colors.background.primary};
+  background-color: ${({ theme }) => theme.colors.background.primary.medium};
   position: relative;
 
   h2 {
@@ -89,6 +89,7 @@ export const ProjectContainer = styled.div`
 
 export const ImageContainer = styled.div`
   height: 330px;
+  width: 100%;
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 40px;
 
@@ -109,12 +110,8 @@ export const ImageContainer = styled.div`
 
 export const DescriptionContainer = styled.div`
   margin-block: 1rem;
-
-  @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: saturate(140%) blur(10px);
-    padding: 1rem 2rem;
-  }
+  background-color: ${({ theme }) => theme.colors.background.primary.light};
+  padding: 1rem 2rem;
 
   p {
     color: ${({ theme }) => theme.colors.text.tertiary.light};

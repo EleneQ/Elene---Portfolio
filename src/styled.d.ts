@@ -11,7 +11,10 @@ declare module "styled-components" {
     };
     colors: {
       background: {
-        primary: string;
+        primary: {
+          light: string;
+          medium: string;
+        };
         secondary: string;
         tertiary: string;
       };

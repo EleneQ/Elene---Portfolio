@@ -1,14 +1,10 @@
-<p align="center">
-  <img src="" alt="logo" />
-</p>
-
 # Portfolio 👩‍💻
 
 Hello, I'm ELene, a Georgian Full-stack Programmer👋
 
 Credits for the design: [Laaqiq.design](https://www.figma.com/community/file/1063415783897538948)
 
-👉Live Demo: [Portfolio Demo](https://elene.pages.dev/)
+👉Live Demo: [Portfolio](https://elene.pages.dev/)
 
 ### Built with:
 

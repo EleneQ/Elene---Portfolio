@@ -2,6 +2,7 @@ import { DefaultTheme } from "styled-components";
 
 const colorTokens = {
   blue: {
+    800: "rgb(39, 40, 70)",
     900: "#28293E",
   },
   pink: {
@@ -36,7 +37,10 @@ const theme: DefaultTheme = {
   },
   colors: {
     background: {
-      primary: colorTokens.blue[900],
+      primary: {
+        light: colorTokens.blue[800],
+        medium: colorTokens.blue[900],
+      },
       secondary: colorTokens.pink[300],
       tertiary: colorTokens.gray[400],
     },

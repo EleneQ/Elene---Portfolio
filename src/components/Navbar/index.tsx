@@ -87,7 +87,10 @@ const Navbar = () => {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: index * 0.1, duration: 0.5 }}
                     >
-                      <LinkStyled href={`#${navLink.toLowerCase()}`}>
+                      <LinkStyled
+                        href={`#${navLink.toLowerCase()}`}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
                         {navLink}
                       </LinkStyled>
                     </motion.li>

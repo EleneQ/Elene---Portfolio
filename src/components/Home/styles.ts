@@ -4,7 +4,7 @@ import star from "@/images/star.svg";
 import elene from "@/images/elene.jpg";
 
 export const StyledHero = styled.section`
-  background-color: ${({ theme }) => theme.colors.background.primary};
+  background-color: ${({ theme }) => theme.colors.background.primary.medium};
 `;
 
 export const HeroContainer = styled(Container)`

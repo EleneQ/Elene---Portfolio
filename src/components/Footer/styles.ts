@@ -2,7 +2,7 @@ import { Container } from "@/styles/util-styles";
 import styled from "styled-components";
 
 export const FooterStyled = styled.footer`
-  background-color: ${({ theme }) => theme.colors.background.primary};
+  background-color: ${({ theme }) => theme.colors.background.primary.medium};
   margin-top: 3rem;
 
   hr {

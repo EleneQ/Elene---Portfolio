@@ -10,7 +10,7 @@ export const StyledHeader = styled.header<{ isTopOfPage: boolean }>`
   width: 100%;
   color: ${({ theme }) => theme.colors.text.secondary.lightest};
   background-color: ${({ theme, isTopOfPage }) =>
-    isTopOfPage ? "transparent" : theme.colors.background.primary};
+    isTopOfPage ? "transparent" : theme.colors.background.primary.medium};
   box-shadow: ${({ isTopOfPage }) =>
     isTopOfPage ? "" : "rgba(0, 0, 0, 0.45) 0px 5px 15px"};
   transition: background-color 0.3s ease-in-out;
