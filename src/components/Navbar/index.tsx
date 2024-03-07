@@ -23,7 +23,7 @@ const CVLink = ({ setIsMobileMenuOpen }: CVLinkProps) => {
   return (
     <a
       className="nav-link cv-link"
-      href="https://www.dropbox.com/scl/fi/x9wdzw61katq47x6mbr5o/Resume.pdf?rlkey=mdghqluhq5kixxrczb5kqs4e9&dl=0"
+      href="https://www.dropbox.com/scl/fi/sjum75iaec0ma0zvdswhx/Resume.pdf?rlkey=igt9llrgp1eyf5ij3ufcapbpn&dl=0"
       target="_blank"
       onClick={() => setIsMobileMenuOpen(false)}
     >
